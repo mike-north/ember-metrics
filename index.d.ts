@@ -1,4 +1,5 @@
 declare module 'ember-metrics/services/metrics' {
+  import Service from '@ember/service';
   import { FacebookPixelMetricsAdapter } from 'ember-metrics/metrics-adapters/facebook-pixel';
   import { GoogleAnalyticsMetricsAdapter } from 'ember-metrics/metrics-adapters/google-analytics';
   import { GoogleTagManagerMetricsAdapter } from 'ember-metrics/metrics-adapters/google-tag-manager';
@@ -17,7 +18,6 @@ declare module 'ember-metrics/services/metrics' {
   }
   type AdapterName = keyof AdapterMap;
 
-  import Service from '@ember/service';
   export default class MetricsService extends Service {
     public enabled: boolean;
     public identify(options: any): void;
@@ -41,7 +41,7 @@ declare module 'ember-metrics/metrics-adapters/base' {
     public trackEvent?: (opts?: any) => void;
     public trackPage?: (opts?: any) => void;
     public alias?: (opts?: any) => void;
-  } 
+  }
 }
 
 declare module 'ember-metrics/metrics-adapters/facebook-pixel' {

@@ -1,11 +1,13 @@
 {
   "name": "ember-metrics",
   "version": "0.12.1",
-  "description": "Send data to multiple analytics integrations without re-implementing new API",
+  "description":
+    "Send data to multiple analytics integrations without re-implementing new API",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
+  "types": "index.d.ts",
   "scripts": {
     "start": "ember server",
     "build": "ember build",
